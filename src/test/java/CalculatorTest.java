@@ -34,9 +34,7 @@ public class CalculatorTest {
 
     @Test
     void testDivideByZeroExceptionMessage() {
-        ArithmeticException exception = Assertions.assertThrows(ArithmeticException.class, () -> {
-            Calculator.divide(5.0, 0.0);
-        });
+        ArithmeticException exception = Assertions.assertThrows(ArithmeticException.class, () -> Calculator.divide(5.0, 0.0));
 
         String expectedMessage = "Cannot divide by zero";
         String actualMessage = exception.getMessage();
